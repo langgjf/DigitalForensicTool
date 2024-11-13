@@ -1,0 +1,10 @@
+﻿  Building Custom Rule C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/kernel/CMakeLists.txt
+  file.c
+  globals.c
+  log.c
+  process.c
+  procmon.c
+  reg.c
+  utils.c
+  Generating Code...
+  procmon.vcxproj -> C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\bin\Debug\procmon.sys

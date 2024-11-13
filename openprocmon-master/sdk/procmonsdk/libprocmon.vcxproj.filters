@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\buffer.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\drvload.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\event.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\eventfactory.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\eventmgr.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\eventview.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\fileopt.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\logger.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\module.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\monctl.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\pch.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\process.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\procmgr.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\procopt.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\regopt.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\strmaps.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\thread.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\utils.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\viewer.cxx">
+      <Filter>source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\buffer.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\drvload.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\event.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\eventfactory.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\eventmgr.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\eventview.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\fileopt.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\fltuser.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\kernelsdk.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\logger.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\module.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\monctl.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\pch.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\process.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\procmgr.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\procopt.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\refobject.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\regopt.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\sdk.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\singleton.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\strmaps.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\thread.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\utils.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\viewer.hpp">
+      <Filter>inc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\langj\OneDrive\Documents\Y3\Y3T1\ICT3215DigitalForensics\Project\openprocmon-master\sdk\procmonsdk\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="inc">
+      <UniqueIdentifier>{B66E7692-DF64-3C45-9A23-922F800A4238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{CAF5746D-DEED-3E18-94AD-5E262C4A0F59}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

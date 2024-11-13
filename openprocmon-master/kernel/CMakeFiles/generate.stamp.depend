@@ -1,0 +1,5 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.31/Modules/FindPackageMessage.cmake
+C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/cmake/FindWdk.cmake
+C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/kernel/CMakeLists.txt

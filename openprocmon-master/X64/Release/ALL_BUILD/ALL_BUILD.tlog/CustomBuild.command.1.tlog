@@ -1,0 +1,10 @@
+^C:\USERS\LANGJ\ONEDRIVE\DOCUMENTS\Y3\Y3T1\ICT3215DIGITALFORENSICS\PROJECT\OPENPROCMON-MASTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master -BC:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master --check-stamp-file C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

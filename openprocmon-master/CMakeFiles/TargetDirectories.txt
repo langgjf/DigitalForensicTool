@@ -1,0 +1,10 @@
+C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/CMakeFiles/ALL_BUILD.dir
+C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/CMakeFiles/ZERO_CHECK.dir
+C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/kernel/CMakeFiles/procmon.dir
+C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/kernel/CMakeFiles/ALL_BUILD.dir
+C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/gui/CMakeFiles/openprocmingui.dir
+C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/gui/CMakeFiles/ALL_BUILD.dir
+C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/sdk/procmonsdk/CMakeFiles/libprocmon.dir
+C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/sdk/procmonsdk/CMakeFiles/ALL_BUILD.dir
+C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/sdk/example/CMakeFiles/example.dir
+C:/Users/langj/OneDrive/Documents/Y3/Y3T1/ICT3215DigitalForensics/Project/openprocmon-master/sdk/example/CMakeFiles/ALL_BUILD.dir
