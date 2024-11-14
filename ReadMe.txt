@@ -33,6 +33,6 @@ Verify Script Functionality
 
 Note:
 -----
-- Disable Powershell Script: Type Set-ExecutionPolicy Restricted in PowerShell (admin)
-- Idle process: A system process that doesn’t have a conventional start time as it is essentially always present when the system is running
+- Disable Powershell Script: Type Set-ExecutionPolicy Restricted in PowerShell (admin).
+- Idle process: A system process that doesn’t have a conventional start time as it is essentially always present when the system is running.
 - Logging to File: Writes all alerts to a specified log file for record-keeping.
