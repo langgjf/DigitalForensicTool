@@ -1,3 +1,7 @@
+# Define the log file path
+
+$logFilePath = "C:\path\to\your\IPProcesslogfile.txt" # Update this path
+
 # Run netstat and skip the first few lines (header lines)
 $netstatOutput = netstat -ano
 
@@ -30,12 +34,27 @@ foreach ($line in $netstatOutput) {
         try {
             $process = Get-Process -Id $processID -ErrorAction Stop
             $processName = $process.ProcessName
+
+             # Check if the StartTime property is available, Handle "Idle" process
+             $startTime = if ($processName -eq "Idle") { 
+                "N/A" 
+            } else { 
+                $process.StartTime.ToString("yyyy-MM-dd HH:mm:ss") 
+            }
         }
         catch {
             $processName = "Unknown"
+            $startTime = "N/A"
         }
 
+        # Get the current timestamp
+        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+
         # Display connection details
-        Write-Output "Protocol: $protocol, Local Address: $localAddress, Remote Address: $remoteAddress, State: $state, Process ID: $processID, Process Name: $processName"
+        $logMessage = "$timestamp - Protocol: $protocol, Local Address: $localAddress, Remote Address: $remoteAddress, State: $state, Process ID: $processID, Process Name: $processName, Process Start Time: $startTime"
+
+         # Append the log message to logfile.txt
+        Add-Content -Path $logFilePath -Value $logMessage
     }
 }
+Write-Output "Log has been saved to $logFilePath"
