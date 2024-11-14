@@ -1,5 +1,4 @@
 # Define the log file path
-
 $logFilePath = "C:\path\to\your\IPProcesslogfile.txt" # Update this path
 
 # Run netstat and skip the first few lines (header lines)
