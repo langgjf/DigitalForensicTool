@@ -34,7 +34,7 @@ foreach ($line in $netstatOutput) {
             $process = Get-Process -Id $processID -ErrorAction Stop
             $processName = $process.ProcessName
 
-             # Check if the StartTime property is available, Handle "Idle" process
+             # Check if the StartTime property is available, Handle the "Idle" process
              $startTime = if ($processName -eq "Idle") { 
                 "N/A" 
             } else { 
@@ -52,7 +52,7 @@ foreach ($line in $netstatOutput) {
         # Display connection details
         $logMessage = "$timestamp - Protocol: $protocol, Local Address: $localAddress, Remote Address: $remoteAddress, State: $state, Process ID: $processID, Process Name: $processName, Process Start Time: $startTime"
 
-         # Append the log message to logfile.txt
+        # Append the log message to IPProcesslogfile.txt
         Add-Content -Path $logFilePath -Value $logMessage
     }
 }
