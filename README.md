@@ -32,4 +32,7 @@ signtool sign /v /s PrivateCertStore /n MyCert /fd SHA256 /tr http://timestamp.d
 1) Download [openprocmon](https://github.com/progmboy/openprocmon). 
 2) Extract the file into project directory. Eg. "C:\ICT3215\Project\openprocmon".
 3) Open procmon_gui.vcxproj("C:\ICT3215\Project\openprocmon\gui").
-4) Configure openprocmon to use the WTL installed by changing the 4 instances of "D:\source\WTL10_9163\Include" to "C:\ICT3215\Project\WTL10_10320_Release\Include"
+4) Configure openprocmon to use the WTL installed by changing the 4 instances of "D:\source\WTL10_9163\Include" to "C:\ICT3215\Project\WTL10_10320_Release\Include".
+5) Verify that the set up is successful by launching openprocmingui.exe("C:\ICT3215\Project\openprocmon\bin\Release\openprocmingui.exe") as an administrator.
+![image](https://github.com/user-attachments/assets/50d2e8f2-d17b-4774-8ee6-9e712f52f869)
+
