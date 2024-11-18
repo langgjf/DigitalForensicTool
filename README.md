@@ -36,3 +36,12 @@ signtool sign /v /s PrivateCertStore /n MyCert /fd SHA256 /tr http://timestamp.d
 5) Verify that the set up is successful by launching openprocmingui.exe("C:\ICT3215\Project\openprocmon\bin\Release\openprocmingui.exe") as an administrator.
 ![image](https://github.com/user-attachments/assets/50d2e8f2-d17b-4774-8ee6-9e712f52f869)
 
+## Kiwi Syslog Server Set Up:
+1) Download [Kiwi Syslog Server](https://www.solarwinds.com/free-tools/kiwi-free-syslog-server).
+2) After installation, run the Kiwi Syslog Server Console as an administrator.
+3) Navigate to Kiwi Syslog Server Setup -> Inputs -> UDP
+4) Ensure that Listen for UDP Syslog messages is checked and UDP Port 514 is bind.
+> [!IMPORTANT]  
+> Ensure that Windows Firewall allows inbound and outbound traffic to port 514, else syslog message would not be captured.
+5) Navigate to Kiwi Syslog Service Manager -> Manage -> Start the Syslogd service.
+6) Kiwi Syslog Server is now ready to receive syslog messages.
