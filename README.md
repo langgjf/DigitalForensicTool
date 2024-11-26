@@ -1,5 +1,25 @@
-# Background Task Analyzer Tool
-## Install Dependencies:
+# SmartProc (Background Task Analyzer Tool)
+SmartProc is a background task analyzer tool integrated with Procmon. 
+
+SmartProc is capable of the following features:
+1) Monitor and alert of suspicious port connections
+2) Monitor and alert of suspicious IP addresses
+3) Monitor and alert for processes running with administrator privileges
+4) Monitor and alert for resource-intensive processes
+
+# Table of contents
+1. [Set Up](#setup)
+    1. [Install Dependencies](#dependencies)
+    2. [Open Source Procmon Set Up](#procmon)
+    3. [Kiwi Syslog Server Set Up](#syslog)
+2. [Usage Instructions](#usage)
+    1. [Port Connection Monitoring](#port)
+    2. [IP Address Monitoring](#IP)
+    3. [Administrative Privileges Monitoring](#admin)
+    4. [Resource Usage Monitoring](#resource)
+
+# Set Up <a name="setup"></a>
+## Install Dependencies: <a name="dependencies"></a>
 1) Install Step 1, 2 and 3 from [Windows Driver Kit(WDK)](https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk) for developing, testing and deploying drivers for Windows operating systems.
 2) Install [Windows Template Library(WTL)](https://sourceforge.net/projects/wtl/) used for developing Windows applications and UI components.
 3) Place WTL in project folder. Eg. "C:\ICT3215\Project\WTL10_10320_Release"
@@ -28,7 +48,7 @@ Makecert -r -pe -ss PrivateCertStore -n "CN=MyCert" MyCert.cer
 signtool sign /v /s PrivateCertStore /n MyCert /fd SHA256 /tr http://timestamp.digicert.com/ /td SHA256 C:\ICT3215\Project\openprocmon\bin\Release\procmon.sys
 ```    
 
-## Open Source Procmon Set Up:
+## Open Source Procmon Set Up: <a name="procmon"></a>
 1) Download [openprocmon](https://github.com/progmboy/openprocmon). 
 2) Extract the file into project directory. Eg. "C:\ICT3215\Project\openprocmon".
 3) Open procmon_gui.vcxproj("C:\ICT3215\Project\openprocmon\gui").
@@ -36,7 +56,7 @@ signtool sign /v /s PrivateCertStore /n MyCert /fd SHA256 /tr http://timestamp.d
 5) Verify that the set up is successful by launching openprocmingui.exe("C:\ICT3215\Project\openprocmon\bin\Release\openprocmingui.exe") as an administrator.
 ![image](https://github.com/user-attachments/assets/50d2e8f2-d17b-4774-8ee6-9e712f52f869)
 
-## Kiwi Syslog Server Set Up:
+## Kiwi Syslog Server Set Up: <a name="syslog"></a>
 1) Download [Kiwi Syslog Server](https://www.solarwinds.com/free-tools/kiwi-free-syslog-server).
 2) After installation, run the Kiwi Syslog Server Console as an administrator.
 3) Navigate to Kiwi Syslog Server Setup -> Inputs -> UDP
@@ -45,3 +65,49 @@ signtool sign /v /s PrivateCertStore /n MyCert /fd SHA256 /tr http://timestamp.d
 > Ensure that Windows Firewall allows inbound and outbound traffic to port 514, else syslog message would not be captured.
 5) Navigate to Kiwi Syslog Service Manager -> Manage -> Start the Syslogd service.
 6) Kiwi Syslog Server is now ready to receive syslog messages.
+# Usage Instructions <a name="usage"></a>
+1) Clone the repository and unzip in project directory. Eg. "C:\ICT3215\Project\SmartProc"
+2) Navigate to RunTimeExecution folder. "C:\ICT3215\Project\SmartProc\RunTimeExecution"
+3) Open an administrative PowerShell in the RunTimeExecution directory.
+4) Execute SmartProc via the following command.
+```
+python startSmartProc.py
+```
+5) Congratulations! SmartProc is now monitoring background processes, port connections, IP addresses, processes with administrative privileges and resource usage.
+6) Any violations or suspicious activities will now be flagged and sent to the Kiwi Syslog server for further analysis.
+## Port Connection Monitoring: <a name="port"></a>
+1) SmartProc has been configured to monitor for suspicious port connections every 60 seconds.
+The following table shows the ports and their corresponding vulnerability that SmartProc monitors for.
+
+| Port | Usage | Vulnerability |
+| --- | --- | --- |
+| 69 | Trivial File Transfer Protocol for transferring configuration files   | Exploit for unauthorized file transfers |
+| 445 | File and printer sharing | Exploit for ransomware and lateral movement |
+| 1433 | Database connections | Exploit SQL injection and privilege escalation |
+| 3389 | Remote Desktop Protocol for remote administration | Exploit for ransomware and lateral movement |
+| 4444 | For remote shells | Exploit by worms and malware for backdoor |
+| 5555 | Android Debug Bridge used by IoT devices | Utilized by unauthorized remote administration tools |
+| 6667 | For chat applications and Internet Relay Chat services | Exploit by malware for command-and-control communications |
+| 8080 | HTTP proxy | Exploit for SQL injection and directory traversal |
+| 12345 | Remote administration tool | Remote access trojan exploitation to control infected machines |
+| 31337 | - | Remote access trojan exploitation to control infected machines |
+
+2) For simulation of suspicious port connection, open an administrative PowerShell.
+```
+# Example for opening a TCP listener on port 6667, indicative of malware C2
+$listener = [System.Net.Sockets.TcpListener]6667
+$listener.Start()
+```
+> [!IMPORTANT]  
+> To close the open connection on port 6667, simply close the administrative PowerShell session.
+3) SmartProc should capture the suspicious port connections, flag the connections and send the suspicious connections to the Kiwi Syslog server.
+4) The Kiwi Syslog server should successfully receive the suspicious logs.
+![image](https://github.com/user-attachments/assets/f59d6f25-2357-47dd-9a5a-0ad1158341ab)
+5) The captured details of time, IP address, PID, process name and path relating to the suspicious port connections would greatly help forensic investigators in identifying the extent of compromise.
+## IP Address Monitoring: <a name="IP"></a>
+
+
+## Administrative Privileges Monitoring: <a name="admin"></a>
+
+
+## Resource Usage Monitoring: <a name="resource"></a>
