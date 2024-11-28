@@ -108,7 +108,7 @@ $listener.Start()
 ## IP Address Monitoring: <a name="IP"></a>
 1) SmartProc has been configured to monitor for suspicious IP addresses.
 > [!IMPORTANT]  
-> To save the logs for capturing suspicious IP addresses in local machine, simply change the log file's path in the IPaddProcess.ps1
+> Change the path of the log file in IPaddProcess.ps1 to save the logs as a text file in the local machine
 ```
 $logFile = "C:\path\to\your\IPProcesslogfile.txt"
 ```
