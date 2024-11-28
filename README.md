@@ -134,3 +134,39 @@ Set-ExecutionPolicy RemoteSigned -Scope Process
 
 
 ## Resource Usage Monitoring: <a name="resource"></a>
+#### In PowerShell (Admin):
+1) Install the `BurntToast` module for alert notifications:
+     ```powershell
+     Install-Module -Name BurntToast -Force -Scope CurrentUser
+     ```
+#### On Windows:
+2) Copy the provided script using Text Editor in your project directory.
+3) Update the log file path in the script:
+     ```powershell
+     $logFile = "C:\path\to\your\logfile.txt"
+     ```
+4) Save the provided script as `MonitorProcess.ps1` in your project directory.
+#### In PowerShell (Admin):
+5) Open PowerShell with Administrator privileges.
+6) Navigate to the directory containing `MonitorProcess.ps1`.
+7) Execute the script:
+     ```powershell
+     .\MonitorProcess.ps1
+     ```
+
+---
+### Usage Instructions
+1. **Testing Resource Monitoring**:
+   - Open resource-heavy applications like Chrome with multiple tabs, video streaming apps, or gaming software.
+   - Observe the alerts generated in the PowerShell console or via Windows notifications.
+
+2. **Adjusting Thresholds**:
+   - Update the script’s thresholds for testing:
+     - CPU Threshold: Adjust `cpuThreshold` to trigger alerts for specific usage levels.
+     - Memory Threshold: Adjust `memoryThreshold` to monitor processes consuming specified amounts of memory.
+
+3. **Log Analysis**:
+   - Analyze logs stored at the specified path (e.g., `C:\path\to\your\logfile.txt`).
+   - Logs can be reviewed locally or on the Kiwi Syslog Server.
+
+---
