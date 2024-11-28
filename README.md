@@ -118,6 +118,17 @@ Insert Screenshot of suspicious logs of ip addresses in Kiwki Syslog server here
 ```
 4) The captured details of timestamp, Protocol, Local IP address, Remote IP address, PID, Process Name and Process Start Time relating to the suspicious ip addresses would greatly help forensic investigators in identifying the extent of compromise.
 ## Administrative Privileges Monitoring: <a name="admin"></a>
+1) SmartProc has been configured to also capture and display for processes that uses elevated administrative privileges.
+> [!IMPORTANT]  
+> Run the following command. This command allows the script to run for the current PowerShell session only.
+```
+Set-ExecutionPolicy RemoteSigned -Scope Process  
+```
+2) SmartProc will start to query the Win32_Process WMI class for the specific process using its ProcessId. it will then use the WindowsPrincipal and WindowsIdentity to check if the process is elevated.
+3) The Kiwi server will then receive logs relating to the elevation status of the processes running.
+INSERT IMAGE OF SAMPLE OF THE CAPTURE LOG.
+
+4) It will show the process name, its ID and elevation status.
 
 
 ## Resource Usage Monitoring: <a name="resource"></a>
