@@ -1,4 +1,4 @@
-# SmartProc (Background Task Analyzer Tool)
+# SmartProc (Smart Process Monitoring Tool)
 SmartProc is a background task analyzer tool integrated with Procmon. 
 
 SmartProc is capable of the following features:
@@ -108,7 +108,7 @@ $listener.Start()
 ## IP Address Monitoring: <a name="IP"></a>
 1) SmartProc has been configured to monitor for suspicious IP addresses.
 > [!IMPORTANT]  
-> To save the logs for capturing suspicious IP addresses in local machine, simply change the log file's path in the IPaddProcess.ps1
+> Change the path of the log file in IPaddProcess.ps1 to save the logs as a text file in the local machine
 ```
 $logFile = "C:\path\to\your\IPProcesslogfile.txt"
 ```
@@ -122,10 +122,13 @@ $logFile = "C:\path\to\your\IPProcesslogfile.txt"
 ## Administrative Privileges Monitoring: <a name="admin"></a>
 1) SmartProc has been configured to also capture and display for processes that uses elevated administrative privileges.
 > [!IMPORTANT]  
-> Run the following command. This command allows the script to run for the current PowerShell session only.
+> Run the following command. This command allows the script to run for the current PowerShell session only so as to protect the host device from running unknown scripts which could be malicious.
 ```
 Set-ExecutionPolicy RemoteSigned -Scope Process  
 ```
+![image](https://github.com/user-attachments/assets/03f049d7-41c2-449f-9c21-7558ee9a1d9d)
+Key 'Y' when prompted and run the script.
+
 2) SmartProc will start to query the Win32_Process WMI class for the specific process using its ProcessId. it will then use the WindowsPrincipal and WindowsIdentity to check if the process is elevated.
 3) The Kiwi server will then receive logs relating to the elevation status of the processes running.
 ![image](https://github.com/user-attachments/assets/6885352f-d4c8-46c8-893e-abd8b7d228b2)
@@ -134,3 +137,41 @@ Set-ExecutionPolicy RemoteSigned -Scope Process
 
 
 ## Resource Usage Monitoring: <a name="resource"></a>
+#### In PowerShell (Admin):
+1) Install the `BurntToast` module for alert notifications:
+     ```powershell
+     Install-Module -Name BurntToast -Force -Scope CurrentUser
+     ```
+#### On Windows:
+2) Copy the provided script using Text Editor in your project directory.
+> [!IMPORTANT]  
+> Change the path of the log file.
+```powershell
+$logFile = "C:\path\to\your\logfile.txt"
+```
+3) Save the provided script as `MonitorProcess.ps1` in your project directory.
+#### In PowerShell (Admin):
+4) Open PowerShell with Administrator privileges.
+5) Navigate to the directory containing `MonitorProcess.ps1`.
+6) Execute the script:
+     ```powershell
+     .\MonitorProcess.ps1
+     ```
+     
+---
+### Usage Instructions
+1. **Testing Resource Monitoring**:
+   - Open resource-heavy applications like Chrome with multiple tabs, video streaming apps, or gaming software.
+   - Observe the alerts generated in the PowerShell console or via Windows notifications.
+
+2. **Adjusting Thresholds**:
+   - Update the script’s thresholds for testing:
+     - CPU Threshold: Adjust `cpuThreshold` to trigger alerts for specific usage levels.
+     - Memory Threshold: Adjust `memoryThreshold` to monitor processes consuming specified amounts of memory.
+
+3. **Log Analysis**:
+   - Analyze logs stored at the specified path (e.g., `C:\path\to\your\logfile.txt`).
+   - Logs can be reviewed locally or on the Kiwi Syslog Server.
+![image](https://github.com/user-attachments/assets/3d2be5c7-c0ae-401c-a90f-553570ee7e9d)
+
+---
