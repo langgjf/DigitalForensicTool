@@ -1,4 +1,4 @@
-# SmartProc (Background Task Analyzer Tool)
+# SmartProc (Smart Process Monitoring Tool)
 SmartProc is a background task analyzer tool integrated with Procmon. 
 
 SmartProc is capable of the following features:
@@ -141,15 +141,16 @@ Set-ExecutionPolicy RemoteSigned -Scope Process
      ```
 #### On Windows:
 2) Copy the provided script using Text Editor in your project directory.
-3) Update the log file path in the script:
+> [!IMPORTANT]  
+> Change the path of the log file in MonitorProcess.ps1 to save the logs as a text file in the local machine
      ```powershell
      $logFile = "C:\path\to\your\logfile.txt"
      ```
-4) Save the provided script as `MonitorProcess.ps1` in your project directory.
+3) Save the provided script as `MonitorProcess.ps1` in your project directory.
 #### In PowerShell (Admin):
-5) Open PowerShell with Administrator privileges.
-6) Navigate to the directory containing `MonitorProcess.ps1`.
-7) Execute the script:
+4) Open PowerShell with Administrator privileges.
+5) Navigate to the directory containing `MonitorProcess.ps1`.
+6) Execute the script:
      ```powershell
      .\MonitorProcess.ps1
      ```
