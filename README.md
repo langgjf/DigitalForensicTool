@@ -104,19 +104,21 @@ $listener.Start()
 4) The Kiwi Syslog server should successfully receive the suspicious logs.
 ![image](https://github.com/user-attachments/assets/f59d6f25-2357-47dd-9a5a-0ad1158341ab)
 5) The captured details of time, IP address, PID, process name and path relating to the suspicious port connections would greatly help forensic investigators in identifying the extent of compromise.
+
 ## IP Address Monitoring: <a name="IP"></a>
-1) SmartProc has been configured to monitor for suspicious ip addresses.
+1) SmartProc has been configured to monitor for suspicious IP addresses.
 > [!IMPORTANT]  
-> To save the logs for capturing suspicious ip addresses in local machine, simply change the log file's path in the IPaddProcess.ps1
+> To save the logs for capturing suspicious IP addresses in local machine, simply change the log file's path in the IPaddProcess.ps1
 ```
 $logFile = "C:\path\to\your\IPProcesslogfile.txt"
 ```
-2) SmartProc should capture the suspicious ip addresses, save the information in a log file and send them to the Kiwi Syslog server.
+2) SmartProc should capture the suspicious IP addresses, save the information in a log file and send them to the Kiwi Syslog server.
 3) The Kiwi Syslog server should successfully receive the suspicious logs.
-```
-Insert Screenshot of suspicious logs of ip addresses in Kiwki Syslog server here
-```
-4) The captured details of timestamp, Protocol, Local IP address, Remote IP address, PID, Process Name and Process Start Time relating to the suspicious ip addresses would greatly help forensic investigators in identifying the extent of compromise.
+![image](https://github.com/user-attachments/assets/16d5adb0-6cd8-4d60-b1bc-57328fe0fdc9)
+![image](https://github.com/user-attachments/assets/c05b4736-94d8-48fd-837d-fcaab03ff50e)
+
+4) The captured details of timestamp, Protocol, Local IP address, Remote IP address, PID, Process Name and Process Start Time relating to the suspicious IP addresses would greatly help forensic investigators in identifying the extent of compromise.
+
 ## Administrative Privileges Monitoring: <a name="admin"></a>
 1) SmartProc has been configured to also capture and display for processes that uses elevated administrative privileges.
 > [!IMPORTANT]  
@@ -126,7 +128,7 @@ Set-ExecutionPolicy RemoteSigned -Scope Process
 ```
 2) SmartProc will start to query the Win32_Process WMI class for the specific process using its ProcessId. it will then use the WindowsPrincipal and WindowsIdentity to check if the process is elevated.
 3) The Kiwi server will then receive logs relating to the elevation status of the processes running.
-INSERT IMAGE OF SAMPLE OF THE CAPTURE LOG.
+![image](https://github.com/user-attachments/assets/6885352f-d4c8-46c8-893e-abd8b7d228b2)
 
 4) It will show the process name, its ID and elevation status.
 
