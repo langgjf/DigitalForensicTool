@@ -122,10 +122,13 @@ $logFile = "C:\path\to\your\IPProcesslogfile.txt"
 ## Administrative Privileges Monitoring: <a name="admin"></a>
 1) SmartProc has been configured to also capture and display for processes that uses elevated administrative privileges.
 > [!IMPORTANT]  
-> Run the following command. This command allows the script to run for the current PowerShell session only.
+> Run the following command. This command allows the script to run for the current PowerShell session only so as to protect the host device from running unknown scripts which could be malicious.
 ```
 Set-ExecutionPolicy RemoteSigned -Scope Process  
 ```
+![image](https://github.com/user-attachments/assets/03f049d7-41c2-449f-9c21-7558ee9a1d9d)
+Key 'Y' when prompted and run the script.
+
 2) SmartProc will start to query the Win32_Process WMI class for the specific process using its ProcessId. it will then use the WindowsPrincipal and WindowsIdentity to check if the process is elevated.
 3) The Kiwi server will then receive logs relating to the elevation status of the processes running.
 ![image](https://github.com/user-attachments/assets/6885352f-d4c8-46c8-893e-abd8b7d228b2)
