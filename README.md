@@ -168,6 +168,6 @@ Set-ExecutionPolicy RemoteSigned -Scope Process
 3. **Log Analysis**:
    - Analyze logs stored at the specified path (e.g., `C:\path\to\your\logfile.txt`).
    - Logs can be reviewed locally or on the Kiwi Syslog Server.
-![image](https://github.com/user-attachments/assets/72438413-aecb-40a7-a9e6-249e2273df0f)
+![image](https://github.com/user-attachments/assets/3d2be5c7-c0ae-401c-a90f-553570ee7e9d)
 
 ---
