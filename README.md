@@ -142,7 +142,7 @@ Set-ExecutionPolicy RemoteSigned -Scope Process
 #### On Windows:
 2) Copy the provided script using Text Editor in your project directory.
 > [!IMPORTANT]  
-> Change the path of the log file in MonitorProcess.ps1 to save the logs as a text file in the local machine
+> Change the path of the log file.
 ```powershell
 $logFile = "C:\path\to\your\logfile.txt"
 ```
