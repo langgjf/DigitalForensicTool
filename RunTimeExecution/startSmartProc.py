@@ -63,10 +63,10 @@ def execute_CPUusage_script():
         # proc.wait()  # Wait for the process to finish
         # END
 
-        # Send 5 lines
+        # Send 10 lines
         # Counter for the number of logs sent
         log_count = 0
-        max_logs = 5  # Maximum number of logs to send
+        max_logs = 10  # Maximum number of logs to send
 
         # Read logs and send only the first 5 entries to the syslog server
         for line in iter(proc.stdout.readline, ''):
@@ -84,7 +84,7 @@ def execute_CPUusage_script():
         # Terminate the PowerShell process
         proc.terminate()
         proc.wait()  # Ensure the process has completely stopped
-        # Send 5 to logs END
+        # Send 10 to logs END
 
     except Exception as e:
         print(f"Failed to execute PowerShell script for CPU Monitor: {e}")
@@ -106,11 +106,13 @@ def execute_AdminPriv_script():
         #Send all logs to syslog
         # for line in iter(proc.stdout.readline, ''):  
         #     log_message = line.strip()
-        #     #print(log_message)  
-        #     send_to_syslog(log_message)
+        #     print(log_message)  
+        #      # Check if the line indicates an elevated status
+        #     if "Elevation Status: Elevated" in log_message:
+        #         send_to_syslog(log_message)  # Send only elevated logs to the syslog server
         # END
 
-        # Send 5 lines
+        # Send 10 lines
         line_count = 0  
         for line in iter(proc.stdout.readline, ''):
             log_message = line.strip()
@@ -118,12 +120,12 @@ def execute_AdminPriv_script():
             send_to_syslog(log_message)
             
             line_count += 1  # Increment the counter
-            if line_count >= 5:  # Check if the limit is reached
+            if line_count >= 10:  # Check if the limit is reached
                 break
         # Ensure the process is terminated if the loop is exited early
         proc.terminate()
         proc.wait()
-        # Send 5 to logs END
+        # Send 10 to logs END
         
     except subprocess.CalledProcessError as e:
         print(f"Failed to execute PowerShell script for Admin Privilege: {e}")
@@ -148,9 +150,9 @@ def execute_IPadd_script():
         #     log_message = line.strip()
         #     #print(log_message)  
         #     send_to_syslog(log_message)
-        # END
+        # # END
 
-        # Send 5 lines
+        # Send 10 lines
         line_count = 0  
         for line in iter(proc.stdout.readline, ''):
             log_message = line.strip()
@@ -158,12 +160,12 @@ def execute_IPadd_script():
             send_to_syslog(log_message)
             
             line_count += 1  
-            if line_count >= 5:  
+            if line_count >= 10:  
                 break
         # Ensure the process is terminated if the loop is exited early
         proc.terminate()
         proc.wait()
-        # Send 5 to logs END
+        # Send 10 to logs END
 
     except subprocess.CalledProcessError as e:
         print(f"Failed to execute PowerShell script for IP Address Monitoring: {e}")
