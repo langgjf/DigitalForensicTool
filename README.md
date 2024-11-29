@@ -1,11 +1,12 @@
 # SmartProc (Smart Process Monitoring Tool)
-SmartProc is a background task analyzer tool integrated with Procmon. 
+SmartProc is a background process monitoring tool integrated with Procmon. 
 
 SmartProc is capable of the following features:
 1) Monitor and alert of suspicious port connections
 2) Monitor and alert of suspicious IP addresses
 3) Monitor and alert for processes running with administrator privileges
 4) Monitor and alert for resource-intensive processes
+5) Monitor and alert for processes with suspicious names
 
 # Table of contents
 1. [Set Up](#setup)
@@ -17,6 +18,7 @@ SmartProc is capable of the following features:
     2. [IP Address Monitoring](#IP)
     3. [Administrative Privileges Monitoring](#admin)
     4. [Resource Usage Monitoring](#resource)
+    5. [Process Name Monitoring](#name)
 
 # Set Up <a name="setup"></a>
 ## Install Dependencies: <a name="dependencies"></a>
@@ -135,7 +137,6 @@ Key 'Y' when prompted and run the script.
 
 4) It will show the process name, its ID and elevation status.
 
-
 ## Resource Usage Monitoring: <a name="resource"></a>
 #### In PowerShell (Admin):
 1) Install the `BurntToast` module for alert notifications:
@@ -172,6 +173,7 @@ $logFile = "C:\path\to\your\logfile.txt"
 3. **Log Analysis**:
    - Analyze logs stored at the specified path (e.g., `C:\path\to\your\logfile.txt`).
    - Logs can be reviewed locally or on the Kiwi Syslog Server.
-![image](https://github.com/user-attachments/assets/3d2be5c7-c0ae-401c-a90f-553570ee7e9d)
-
+![image](https://github.com/user-attachments/assets/780eaf3b-fd39-47f8-b875-3a17e6d4dc16)
 ---
+
+## Process Name Monitoring: <a name="name"></a>
