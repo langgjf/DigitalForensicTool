@@ -180,8 +180,9 @@ $logFile = "C:\path\to\your\logfile.txt"
 ### Usage Instructions
 1. Navigate to RunTimeExecution folder. "C:\ICT3215\Project\SmartProc\RunTimeExecution*.
 2. Edit the file "suspicious_patterns.txt" to include the process names that you are looking to filter for.
-3. Open command prompt within the directory.
-4. Execute malicious_filter.py with the following command.
+![image](https://github.com/user-attachments/assets/a5c32eb9-5139-433a-a929-e9c11899a96d)
+4. Open command prompt within the directory.
+5. Execute malicious_filter.py with the following command.
 ```
 python malicious_filter.py
 ```
